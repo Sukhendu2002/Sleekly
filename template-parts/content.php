@@ -28,13 +28,11 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-    <div class="">
+<!--    <div class="">-->
 	<?php sleekly_post_thumbnail(); ?>
 
-	<div class="entry-content md:w-4/5
-
-">
-        <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+	<div class="entry-content">
+        <a class="" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 		<?php the_excerpt(); ?>
         </a>
         <?php
@@ -47,7 +45,7 @@
 		);
 		?>
 	</div>
-    </div>
+<!--    </div>-->
 
     <!-- .entry-content -->
 

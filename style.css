@@ -25,3 +25,75 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 #primary-menu {
     transition: display 0.5 ease-in-out;
 }
+
+.widget_search label {
+    display: none;
+}
+
+.widget_search input[type="search"] {
+    /*width: 100%;*/
+    padding: 0.5rem;
+    border: 1px solid #a8a8a8;
+    border-radius: 5px;
+}
+.widget_search input[type="search"]:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.widget_search button {
+
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+}
+
+.wp-block-heading{
+
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    margin-top: 1rem;
+
+}
+
+.wp-block-latest-posts li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.wp-block-latest-posts  li::before {
+    content: "\2022";
+    margin-right: 0.5rem;
+}
+.wp-block-archives li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.wp-block-archives li::before {
+    content: "\2022";
+    margin-right: 0.5rem;
+}
+.wp-block-archives li a:hover {
+    text-decoration: underline;
+}.wp-block-latest-posts li a:hover {
+    text-decoration: underline;
+}
+
+.wp-block-categories li {
+    display: flex;
+    align-items: center;
+}
+.wp-block-categories li::before {
+    content: "\2022";
+    margin-right: 0.5rem;
+}
+.wp-block-categories li a:hover {
+    text-decoration: underline;
+}
+
+

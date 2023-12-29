@@ -14,8 +14,8 @@
 
 get_header();
 ?>
-	<div class="flex flex-col md:flex-row">
-	<main id="primary" class="site-main">
+	<div class="flex flex-col md:flex-row ">
+	<main id="primary" class="site-main md:mr-6">
 
 		<?php
 		if ( have_posts() ) :

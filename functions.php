@@ -122,13 +122,17 @@ add_action( 'after_setup_theme', 'sleekly_content_width', 0 );
 function sleekly_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'sleekly' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'sleekly' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'name'           => esc_html__( 'Sidebar', 'sleekly' ),
+			'id'             => 'sidebar-1',
+			'description'    => esc_html__( 'Add widgets here.', 'sleekly' ),
+			'class'          => 'bg-white p-4 rounded-lg shadow-md',
+			'before_widget'  => '<section id="%1$s" class="widget %2$s mb-4">',
+			'after_widget'   => '</section>',
+			'before_title'   => '<h2 class="widget-title text-2xl font-bold mb-2">',
+			'after_title'    => '</h2>',
+			'before_sidebar' => '',
+			'after_sidebar'  => '',
+			'show_in_rest'   => false,
 		)
 	);
 }
@@ -141,7 +145,7 @@ function sleekly_scripts() {
 	wp_enqueue_style( 'sleekly-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'sleekly-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'sleekly-tailwind-style', get_template_directory_uri() . '/dist/output.css', array(), _S_VERSION );
-	wp_enqueue_script( 'sleekly-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'sleekly-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), _S_VERSION, true );
 	wp_enqueue_script( 'sleekly-flowbite', 'https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -149,9 +153,12 @@ function sleekly_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'sleekly_scripts' );
-add_filter( 'excerpt_length', function(){
-    return 30;
-} );
+add_filter(
+	'excerpt_length',
+	function () {
+		return 30;
+	}
+);
 
 /**
  * Implement the Custom Header feature.
