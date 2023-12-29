@@ -149,6 +149,9 @@ function sleekly_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'sleekly_scripts' );
+add_filter( 'excerpt_length', function(){
+    return 30;
+} );
 
 /**
  * Implement the Custom Header feature.

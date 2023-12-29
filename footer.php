@@ -11,18 +11,15 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer mt-6 py-6  flex justify-center" >
+
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sleekly' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'sleekly' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
+
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sleekly' ), 'sleekly', '<a href="https://github.com/Sukhendu2002">Sukhendu Sekhar Guria</a>' );
+				printf( esc_html__( '%1$s by %2$s.', 'sleekly' ), 'sleekly', '<a 
+    class="text-blue-500 hover:text-blue-700"
+href="https://github.com/Sukhendu2002">Sukhendu Sekhar Guria</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

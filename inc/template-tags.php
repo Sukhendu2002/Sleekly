@@ -27,12 +27,11 @@ if ( ! function_exists( 'sleekly_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'sleekly' ),
+			esc_html_x( '%s', 'post date', 'sleekly' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
 	}
 endif;
 
@@ -48,7 +47,6 @@ if ( ! function_exists( 'sleekly_posted_by' ) ) :
 		);
 
 		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
 	}
 endif;
 
@@ -136,13 +134,14 @@ if ( ! function_exists( 'sleekly_post_thumbnail' ) ) :
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
 					the_post_thumbnail(
-						'post-thumbnail',
+						'full',
 						array(
-							'alt' => the_title_attribute(
+							'alt'   => the_title_attribute(
 								array(
 									'echo' => false,
 								)
 							),
+							'class' => 'rounded-lg',
 						)
 					);
 				?>
