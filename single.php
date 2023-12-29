@@ -20,8 +20,9 @@ get_header();
 
 			the_post_navigation(
 				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'sleekly' ) . '</span> <span class="nav-title">%title</span>',
+					'prev_text' => '<span class="nav-subtitle mb-3">' . esc_html__( 'Previous:', 'sleekly' ) . '</span> <span class="nav-title mb-3">%title</span>',
 					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'sleekly' ) . '</span> <span class="nav-title">%title</span>',
+					'class'     => 'text-blue-500',
 				)
 			);
 
@@ -36,5 +37,7 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+if(!is_single()){
+    get_sidebar();
+}
 get_footer();

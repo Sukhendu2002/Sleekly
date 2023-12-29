@@ -126,7 +126,17 @@ if ( ! function_exists( 'sleekly_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail(
+                    'full',
+                    array(
+                        'alt'   => the_title_attribute(
+                            array(
+                                'echo' => false,
+                            )
+                        ),
+                        'class' => 'rounded-lg ',
+                    )
+                ); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
@@ -141,7 +151,7 @@ if ( ! function_exists( 'sleekly_post_thumbnail' ) ) :
 									'echo' => false,
 								)
 							),
-							'class' => 'rounded-lg',
+							'class' => 'rounded-lg ',
 						)
 					);
 				?>

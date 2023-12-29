@@ -20,31 +20,24 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area mt-5 mb-5 border-t border-gray-200 pt-5 pb-5  rounded-lg ">
 
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="comments-title">
+		<h2 class="comments-title mb-4">
 			<?php
 			$sleekly_comment_count = get_comments_number();
-			if ( '1' === $sleekly_comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'sleekly' ),
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
-				);
-			} else {
-				printf( 
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $sleekly_comment_count, 'comments title', 'sleekly' ) ),
-					number_format_i18n( $sleekly_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
-				);
-			}
+			echo $sleekly_comment_count;
+            if ( '1' === $sleekly_comment_count ) {
+                esc_html_e( ' Comment', 'sleekly' );
+            } else {
+                esc_html_e( ' Comments', 'sleekly' );
+            }
+
 			?>
-		</h2><!-- .comments-title -->
+		</h2>
 
 		<?php the_comments_navigation(); ?>
 

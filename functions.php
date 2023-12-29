@@ -160,6 +160,7 @@ add_filter(
 	}
 );
 
+
 /**
  * Implement the Custom Header feature.
  */
