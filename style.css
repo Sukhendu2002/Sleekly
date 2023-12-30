@@ -41,6 +41,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	border-color: #000;
 }
 
+
+
 .widget_search button {
 
 	padding: 0.5rem;
@@ -160,4 +162,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .comment-form-cookies-consent{
     margin-bottom: 1rem;
+}
+
+.search-form input[type="search"] {
+	padding: 0.5rem;
+	border: 1px solid #a8a8a8;
+	border-radius: 5px;
+	outline: none;
+	border-color: #000;
+}
+
+.search-form input[type="submit"] {
+	padding: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #000;
+	color: #fff;
 }
