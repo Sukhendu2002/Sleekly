@@ -1,70 +1,49 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+# Minimal Classic Blog WordPress Theme
 
-_s
-===
+This WordPress theme is a minimal and classic blogging theme built using underscores.me as the starter theme and Tailwind CSS for styling. It provides a clean and straightforward design, focusing on simplicity and readability to enhance the blogging experience.
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+![Screenshot 2023-12-30 110129](https://github.com/Sukhendu2002/Sleekly/assets/76804228/7e1974db-41d4-46ac-81b3-111484193525)
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+## Features
 
-* A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample layouts in `sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `sass/style.scss`.
-Note: `.no-sidebar` styles are automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+- **Minimal Design:** The theme follows a minimalist approach to keep the focus on content and readability.
+  
+- **Built with underscores.me:** Leveraging the power of underscores.me ensures a solid foundation for the theme, with clean and well-organized code.
 
-Installation
----------------
+- **Tailwind CSS Integration:** Tailwind CSS is used for styling, allowing for easy customization and a modern, utility-first approach to design.
 
-### Requirements
+- **Responsive Layout:** The theme is designed to provide a seamless and responsive experience across various devices and screen sizes.
 
-`_s` requires the following dependencies:
+## Getting Started
 
-- [Node.js](https://nodejs.org/)
-- [Composer](https://getcomposer.org/)
+1. **Installation:**
+    - Download the theme ZIP file or clone the repository.
+    - Upload the theme folder to the `/wp-content/themes/` directory.
 
-### Quick Start
+2. **Activate the Theme:**
+    - Log in to your WordPress dashboard.
+    - Go to `Appearance > Themes`.
+    - Activate the "Minimal Classic Blog" theme.
 
-Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
+3. **Customization:**
+    - Customize the theme by navigating to `Appearance > Customize`.
+    - Tailor the design, colors, and typography to suit your preferences.
 
-1. Search for `'_s'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
-2. Search for `_s_` to capture all the functions names and replace with: `megatherium_is_awesome_`.
-3. Search for `Text Domain: _s` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
-5. Search for `_s-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
-6. Search for `_S_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
+4. **Blog Setup:**
+    - Create and publish your blog posts.
+    - Utilize WordPress features to manage categories, tags, and featured images.
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+## Theme Customization
 
-### Setup
+The theme is designed to be easily customizable. You can make changes to the styles and appearance by modifying the CSS files, and for more extensive changes, you can leverage the power of Tailwind CSS.
 
-To start using all the tools that come with `_s`  you need to install the necessary Node.js and Composer dependencies :
+### Tailwind CSS
 
-```sh
-$ composer install
-$ npm install
-```
+To customize the styling using Tailwind CSS:
 
-### Available CLI commands
-
-`_s` comes packed with CLI commands tailored for WordPress theme development :
-
-- `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
-- `composer lint:php` : checks all PHP files for syntax errors.
-- `composer make-pot` : generates a .pot file in the `languages/` directory.
-- `npm run compile:css` : compiles SASS files to css.
-- `npm run compile:rtl` : generates an RTL stylesheet.
-- `npm run watch` : watches all SASS files and recompiles them to css when they change.
-- `npm run lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
-- `npm run lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
-- `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
-
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
-
-Good luck!
+1. Install Node.js and npm (if not already installed).
+2. Navigate to the theme directory using the terminal.
+3. Run `npm install` to install the dependencies.
+4. Make your customizations in the `src/styles` directory.
+5. Run `npm run build` to compile the Tailwind CSS.
+6. Updated styles will be applied to the `style.css` file in the root directory.
